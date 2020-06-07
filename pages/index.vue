@@ -1,72 +1,72 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        consul
-      </h1>
-      <h2 class="subtitle">
-        Consul landing page
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div>
+    <div class="header">
+      <div class="header__side">Particip8.io</div>
+      <div class="header__center">
+        <a href="#">Overview</a>
+        <a href="#">Contact</a>
+        <a href="#">About the team</a>
       </div>
+      <div class="header__side">EN</div>
     </div>
+
+    <BannerHome />
+
+    <div class="first-section">
+      <p class="text--above-heading">Participativno odločanje za vašo</p>
+      <h2 class="text--heading color__title">organizacijo.</h2>
+    </div>
+
+    <JumboOne />
+    <JumboTwo />
+    <JumboThree />
+
   </div>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
+import BannerHome from "../components/BannerHome";
+import JumboOne from "../components/JumboOne";
+import JumboTwo from "../components/JumboTwo";
+import JumboThree from "../components/JumboThree";
 
 export default {
   components: {
+      JumboThree,
+      JumboTwo,
+      JumboOne,
+      BannerHome,
     Logo
   }
 }
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+<style scoped lang="scss">
+    @import './assets/style/common.scss';
+    .first-section {
+      justify-content: center;
+      text-align: center;
+      margin: 40px 0 40px 0;
+    }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
+    .header {
+      justify-content: center;
+      display: flex;
+      text-align: center;
+      margin: 10px 0 10px 0;
+      width: 100%;
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
+    &__side {
+      width: 20%;
+      margin: 0 10px 0 10px;
+    }
 
-.links {
-  padding-top: 15px;
-}
+    &__center {
+      width: 60%;
+      margin: 0 10px 0 10px;
+      justify-content: space-between;
+    }
+  }
+
 </style>

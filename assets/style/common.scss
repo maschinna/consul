@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.spacing {
+  &__general{
+    margin: 0 40px 0 40px;
+  }
+
+  &__inner{
+    margin: 40px 5% 40px 5%;
+  }
+}
+
+.color {
+  &__base{
+    background-color: #f0b9ad;
+  }
+
+  &__pale{
+    background-image: linear-gradient(-225deg, #f2d0c9 0%, #fbf5f4 100%);
+  }
+
+  &__title{
+    color: #32366a;
+  }
+}
+
+.text {
+  font-family: 'Barlow', sans-serif;
+
+  &--center {
+    text-align: center;
+  }
+  &--italic {
+    font-style: italic;
+  }
+  &--underline {
+    text-decoration: underline;
+  }
+  &--uppercase {
+    text-transform: uppercase;
+  }
+  &--lowercase {
+    text-transform: lowercase;
+  }
+  &--capitalize {
+    text-transform: capitalize;
+  }
+  /*HEADINGS*/
+  &--heading{
+    font-size: 40px;
+    font-weight: 700;
+  }
+
+  &--above-heading{
+    font-size: 25px;
+    font-weight:500;
+  }
+
+  &--banner-subtitle{
+    font-size: 20px;
+  }
+}
+
+p {
+  font-family: 'Barlow', sans-serif;
+}
