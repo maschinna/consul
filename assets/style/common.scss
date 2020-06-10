@@ -1,4 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+$positions: center, start, end, space-between, space-evenly, space-around, flex-start, flex-end;
+$flexes: 1, 2, 3, 4, 5, 6, 7, 8, 9;
+$weights: 400, 500, 600, 700, 800, 900;
+
+.flex {
+  display: flex;
+
+  @each $position in $positions {
+    &-justify--#{$position} {
+      justify-content: $position;
+    }
+  }
+
+  @each $position in $positions {
+    &-align--#{$position} {
+      align-items: $position;
+    }
+  }
+
+ @each $flex in $flexes {
+   &--#{$flex} {
+     flex: $flex;
+   }
+ }
+
+  &--column {
+    flex-direction: column;
+  }
+
+  &--row {
+    flex-direction: row;
+  }
+}
 
 .spacing {
   &__general{
@@ -8,6 +41,11 @@
   &__inner{
     margin: 40px 5% 40px 5%;
   }
+
+  &__inner-banner{
+    margin: 0 5% 0 5%;
+
+  }
 }
 
 .color {
@@ -15,8 +53,16 @@
     background-color: #f0b9ad;
   }
 
+  &__base-light {
+    background-color: #fafafa;
+  }
+
   &__pale{
     background-image: linear-gradient(-225deg, #f2d0c9 0%, #fbf5f4 100%);
+  }
+
+  &__blue{
+    background-image: linear-gradient(to right, #dcdef3 0%, #f9f9fc 100%);
   }
 
   &__title{
@@ -27,8 +73,17 @@
 .text {
   font-family: 'Barlow', sans-serif;
 
+  @each $weight in $weights {
+    &-weight--#{$weight} {
+      font-weight: $weight;
+    }
+  }
+
   &--center {
     text-align: center;
+  }
+  &--left {
+    text-align: left;
   }
   &--italic {
     font-style: italic;

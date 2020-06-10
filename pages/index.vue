@@ -7,7 +7,7 @@
         <a href="#">Contact</a>
         <a href="#">About the team</a>
       </div>
-      <div class="header__side">EN</div>
+      <div class="header__side">SL</div>
     </div>
 
     <BannerHome />
@@ -20,6 +20,9 @@
     <JumboOne />
     <JumboTwo />
     <JumboThree />
+    <JumboFour />
+
+    <Footer />
 
   </div>
 </template>
@@ -30,9 +33,13 @@ import BannerHome from "../components/BannerHome";
 import JumboOne from "../components/JumboOne";
 import JumboTwo from "../components/JumboTwo";
 import JumboThree from "../components/JumboThree";
+import JumboFour from "../components/JumboFour";
+import Footer from "../components/Footer";
 
 export default {
   components: {
+      Footer,
+      JumboFour,
       JumboThree,
       JumboTwo,
       JumboOne,
@@ -44,6 +51,11 @@ export default {
 
 <style scoped lang="scss">
     @import './assets/style/common.scss';
+
+    a {
+      color: black;
+    }
+
     .first-section {
       justify-content: center;
       text-align: center;
@@ -57,16 +69,15 @@ export default {
       margin: 10px 0 10px 0;
       width: 100%;
 
-    &__side {
-      width: 20%;
-      margin: 0 10px 0 10px;
-    }
+      &__side {
+        width: 20%;
+        margin: 0 10px 0 10px;
+      }
 
-    &__center {
-      width: 60%;
-      margin: 0 10px 0 10px;
-      justify-content: space-between;
+      &__center {
+        width: 60%;
+        margin: 0 10px 0 10px;
+        justify-content: space-between;
+      }
     }
-  }
-
 </style>
