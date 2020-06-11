@@ -1,14 +1,6 @@
 <template>
   <div>
-    <div class="header">
-      <div class="header__side">Particip8.io</div>
-      <div class="header__center">
-        <a href="#">Overview</a>
-        <a href="#">Contact</a>
-        <a href="#">About the team</a>
-      </div>
-      <div class="header__side">SL</div>
-    </div>
+    <Header />
 
     <BannerHome />
 
@@ -35,9 +27,11 @@ import JumboTwo from "../components/JumboTwo";
 import JumboThree from "../components/JumboThree";
 import JumboFour from "../components/JumboFour";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 export default {
   components: {
+      Header,
       Footer,
       JumboFour,
       JumboThree,
@@ -52,32 +46,9 @@ export default {
 <style scoped lang="scss">
     @import './assets/style/common.scss';
 
-    a {
-      color: black;
-    }
-
     .first-section {
       justify-content: center;
       text-align: center;
       margin: 40px 0 40px 0;
-    }
-
-    .header {
-      justify-content: center;
-      display: flex;
-      text-align: center;
-      margin: 10px 0 10px 0;
-      width: 100%;
-
-      &__side {
-        width: 20%;
-        margin: 0 10px 0 10px;
-      }
-
-      &__center {
-        width: 60%;
-        margin: 0 10px 0 10px;
-        justify-content: space-between;
-      }
     }
 </style>

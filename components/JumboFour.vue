@@ -3,11 +3,11 @@
     <div class="flex flex-wrap contact">
       <b-row class="spacing__inner-banner">
         <b-col cols="6">
-          <b-media left-align vertical-align="center">
+          <b-media left-align vertical-align="center" class="flex" style="align-items: center;">
             <template v-slot:aside>
-              <b-img src="~/assets/img/kontaktiraj-nas.png" width="60" alt="kontaktirajte-nas"></b-img>
+              <b-img src="~/assets/img/kontaktiraj-nas.png" alt="kontaktirajte-nas"></b-img>
             </template>
-            <h2 class="color__title text-weight--700" style="margin-top: 50px;">Kontaktiraj nas.</h2>
+            <h2 class="color__title text-weight--700">Kontaktiraj nas.</h2>
             <p>
               Make sure today that you comply with the standards of tomorrow.
             </p>
@@ -17,16 +17,16 @@
           </b-media>
         </b-col>
         <b-col cols="6">
-          <b-media left-align vertical-align="center">
+          <b-media left-align vertical-align="center" class="flex" style="align-items: center;">
             <template v-slot:aside>
-              <b-img src="~/assets/img/o-ekipi.png" width="60" alt="o-ekipi"></b-img>
+              <b-img src="~/assets/img/o-ekipi.png" alt="o-ekipi"></b-img>
             </template>
-            <h2 class="color__title text-weight--700" style="margin-top: 50px;">O ekipi.</h2>
+            <h2 class="color__title text-weight--700">O ekipi.</h2>
             <p>
               Preverite, kako smo fajn in zaupanja vredni.
             </p>
             <p>
-              <a href="mailto:parlameter@djnd.si">DJND ekipa</a>.
+              <nuxt-link to="/about">DJND ekipa</nuxt-link>.
             </p>
           </b-media>
         </b-col>
@@ -50,7 +50,7 @@
   }
   .contact{
     img {
-      width: 252px;
+      width: 170px;
     }
   }
 </style>

@@ -7,11 +7,11 @@
         </b-col>
         <b-col cols="3" style="border: 4px solid #32366a;">
           <img src="~/assets/img/mo-koper.png" />
-          <b-button href="#" class="blue-banner--button" pill>Študija primera</b-button>
+          <b-button href="/references/koper" class="blue-banner--button" pill>Študija primera</b-button>
         </b-col>
         <b-col cols="3" style="border: 4px solid #32366a;">
           <img src="~/assets/img/mo-koper.png" />
-          <b-button href="#" class="blue-banner--button" pill>Študija primera</b-button>
+          <b-button href="/references/kozina" class="blue-banner--button" pill>Študija primera</b-button>
         </b-col>
       </b-row>
     </div>

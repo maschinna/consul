@@ -45,6 +45,7 @@
       flex-wrap: wrap;
       flex-direction: row;
       justify-content: center;
-      margin: 40px 0 10px 0;
+      margin-top: 50px !important;
+      margin-bottom: 20px !important;
     }
 </style>
