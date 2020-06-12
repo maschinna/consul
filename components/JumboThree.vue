@@ -1,19 +1,19 @@
 <template>
   <div class="flex blue-banner color__blue">
     <div class="blue-banner--elements flex flex--column flex-justify--space-between">
-      <b-row style="justify-content: space-evenly;">
-        <b-col cols="3">
+      <div class="flex-grid">
+        <div class="flex-grid__col-30">
           <h1 class="text--heading text--italic color__title text--left">Organizacije, ki nam že zaupajo</h1>
-        </b-col>
-        <b-col cols="3" style="border: 4px solid #32366a;">
+        </div>
+        <div class="flex-grid__col-30" style="border: 4px solid #32366a;">
           <img src="~/assets/img/mo-koper.png" />
           <b-button href="/references/koper" class="blue-banner--button" pill>Študija primera</b-button>
-        </b-col>
-        <b-col cols="3" style="border: 4px solid #32366a;">
-          <img src="~/assets/img/mo-koper.png" />
+        </div>
+        <div class="flex-grid__col-30" style="border: 4px solid #32366a;">
+          <img src="~/assets/img/ob-hrpelje-kozina.png" />
           <b-button href="/references/kozina" class="blue-banner--button" pill>Študija primera</b-button>
-        </b-col>
-      </b-row>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -26,6 +26,30 @@
 
 <style scoped lang="scss">
   @import './assets/style/common.scss';
+
+  .flex-grid {
+    display: flex;
+    justify-content: space-evenly;
+
+    h1{
+      align-items: center;
+    }
+
+    &__col-30 {
+      width: 30%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .flex-grid {
+      display: block;
+
+      &__col-30 {
+        width: 100%;
+        margin-bottom: 40px;
+      }
+    }
+  }
 
   .blue-banner {
     text-align: center;

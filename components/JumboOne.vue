@@ -1,9 +1,9 @@
 <template>
   <div class="color__pale spacing__general">
-    <div class="flex flex--column">
+    <div class="flex flex--column spacing__resp">
       <h1 style="padding: 50px 20% 20px 20%;" class="text--center color__title text--heading">Consul je celovita rešitev za vodenje participativnega odločanja</h1>
-      <b-row class="spacing__inner">
-        <b-col cols="8">
+      <div class="flex-grid spacing__inner spacing__resp">
+        <div class="flex-grid__col-60 spacing__resp">
           <div class="webscreen">
             <div class="text--center color__base" style="padding: 10px 0 10px 0;">
               <strong>Predlagam-odločam</strong> / Mestna občina Koper
@@ -18,8 +18,8 @@
               <p>{{ accordionItem }}</p>
             </div>
           </div>
-        </b-col>
-        <b-col cols="4">
+        </div>
+        <div class="flex-grid__col-40 spacing__resp">
           <div class="sidebar flex flex--column">
             <div class="card--left-border">
               <h2 v-b-toggle.accordion-1 class="m-1 color__title text-weight--700">Uporabniku prijazno zbiranje predlogov</h2>
@@ -46,8 +46,8 @@
               </b-collapse>
             </div>
           </div>
-        </b-col>
-      </b-row>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -66,6 +66,33 @@
 
 <style scoped lang="scss">
   @import './assets/style/common.scss';
+
+  .flex-grid{
+    display: flex;
+  }
+
+  .col-60 {
+    width: 60%;
+  }
+
+  .col-40 {
+    width: 40%;
+    padding-left: 20px;
+  }
+
+  @media (max-width: 900px) {
+    .flex-grid {
+      display: block;
+
+      &__col-60 {
+        width: 100%;
+        margin-bottom: 40px;
+      }
+      &__col-40 {
+        width: 100%;
+      }
+    }
+  }
 
   .webscreen {
     background-color: white;

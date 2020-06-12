@@ -1,8 +1,8 @@
 <template>
   <b-jumbotron class="spacing__general color__base">
     <div class="flex flex-wrap contact">
-      <b-row class="spacing__inner-banner">
-        <b-col cols="6">
+      <div class="flex-grid spacing__inner-banner">
+        <div class="flex-grid__col-60 spacing__resp">
           <b-media left-align vertical-align="center" class="flex" style="align-items: center;">
             <template v-slot:aside>
               <b-img src="~/assets/img/kontaktiraj-nas.png" alt="kontaktirajte-nas"></b-img>
@@ -15,8 +15,8 @@
               Contact us on <a href="mailto:parlameter@djnd.si">parlameter(at)djnd.si</a>.
             </p>
           </b-media>
-        </b-col>
-        <b-col cols="6">
+        </div>
+        <div class="flex-grid__col-60 spacing__resp">
           <b-media left-align vertical-align="center" class="flex" style="align-items: center;">
             <template v-slot:aside>
               <b-img src="~/assets/img/o-ekipi.png" alt="o-ekipi"></b-img>
@@ -29,8 +29,8 @@
               <nuxt-link to="/about">DJND ekipa</nuxt-link>.
             </p>
           </b-media>
-        </b-col>
-      </b-row>
+        </div>
+      </div>
     </div>
   </b-jumbotron>
 </template>
@@ -43,6 +43,25 @@
 
 <style scoped lang="scss">
   @import './assets/style/common.scss';
+
+  .flex-grid{
+    display: flex;
+
+    &__col-60{
+      width: 50%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .flex-grid {
+      display: block;
+
+      &__col-60 {
+        width: 100%;
+        margin-bottom: 40px;
+      }
+    }
+  }
 
   a {
     color: #32366a;
